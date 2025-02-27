@@ -1,26 +1,45 @@
 # Docker_Registry_Demo
 DOCKER TUTORIAL SAMPLE
-This repo is used for Docker tutorial purpose, and it contains only sample Dockerfile which only prints "Hello World" when run.
 
-Prerequisites
-Docker installed on your machine
-Basic understanding of Docker
-Basic understanding of Docker registry
-Having accoung on Github
-To run the Dockerfile
+# Docker Tutorial Sample
+
+This repository is used for Docker tutorial purposes. It contains a sample `Dockerfile` that prints **"Hello World"** when run.
+
+## Prerequisites
+- Docker installed on your machine
+- Basic understanding of Docker
+- Basic understanding of Docker registry
+- A GitHub account
+
+## Running the Dockerfile
+To build and run the Docker image, use the following commands:
+
+```sh
 docker build -t docker-tutorial-sample .
 docker run docker-tutorial-sample
-Docker hub registry
-To push the Docker image to Docker Hub
+```
+
+## Docker Hub Registry
+### Pushing the Docker Image to Docker Hub
+```sh
 docker login
 docker tag docker-tutorial-sample <your-dockerhub-username>/docker-tutorial-sample
 docker push <your-dockerhub-username>/docker-tutorial-sample
-To pull the image from Docker Hub
+```
+
+### Pulling the Image from Docker Hub
+```sh
 docker pull <your-dockerhub-username>/docker-tutorial-sample
-Github Docker registry
-To push to Github registry
+```
+
+## GitHub Docker Registry
+### Pushing the Image to GitHub Registry
+```sh
 docker login ghcr.io
 docker tag docker-tutorial-sample ghcr.io/<your-github-username>/docker-tutorial-sample
 docker push ghcr.io/<your-github-username>/docker-tutorial-sample
-To pull the image from Github registry
+```
+
+### Pulling the Image from GitHub Registry
+```sh
 docker pull ghcr.io/<your-github-username>/docker-tutorial-sample
